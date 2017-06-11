@@ -1,0 +1,10 @@
+RewriteEngine on
+RewriteBase /
+RewriteRule ^list/(.*) doujin/list.php?$1
+RewriteRule ^item/(.*) doujin/item.php?$1
+RewriteRule ^circle/(.*) doujin/circle.php?$1
+RewriteRule ^author/(.*) doujin/author.php?$1
+RewriteRule ^group/(.*) doujin/group.php?$1
+RewriteRule ^series/(.*) doujin/series.php?$1
+RewriteRule ^edit/(.*) doujin/edit.php?$1
+RewriteRule ^search/ doujin/search.php?%{QUERY_STRING}

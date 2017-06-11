@@ -1,0 +1,28 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script type="text/javascript" src="regist.js"></script>
+</head>
+<body>
+
+
+<form method="POST" action="regist.php">
+
+シリーズ名: <input type="text" name="series_name"><br><br>
+シリーズにまとめるアイテムID: <br>
+<div id="item_list">
+<input type="text" name="item1_id"><br>
+<input type="text" name="item2_id"><br>
+</div>
+<input type="button" value="+" onclick="add_item();">
+<br>
+<br>
+<button type="submit" name="cmd" value="addseries_confirm">登録</button>
+
+<br>
+
+</form>
+
+
+</body>
+</html>

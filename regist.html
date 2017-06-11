@@ -1,0 +1,162 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script type="text/javascript" src="regist.js"></script>
+</head>
+<body>
+
+
+<form method="POST" action="regist.php">
+メタ名 <input type="text" name="metatitle" size=60><br>
+誌名 <input type="text" name="title" size=60><br>
+サブタイトル <input type="text" name="subtitle" size=60><br>
+<br>
+
+種別
+<select name="type">
+ <option value="book">同人誌</option>
+</select><br>
+
+サイズ
+<select name="size">
+ <option value="a5">A5</option>
+ <option value="b5" selected>B5</option>
+ <option value="b5l">B5(横)</option>
+ <option value="a4">A4</option>
+ <option value="undef">不定形</option>
+</select><br>
+
+ページ数 <input type="text" name="page"><br>
+<br>
+
+(初版)発行日 <input type="text" name="date">(例:20130101)<br>
+イベント <input type="text" name="event" size=60><br>
+再販日 <input type="text" name="new_date">(例:20130101)<br>
+再販イベント <input type="text" name="new_event" size=60><br>
+版名<input type="text" name="revision">(例: 初版、第二版)<br>
+グループID<input type="text" name="group_id"><br>
+巻名<input type="text" name="volume">(例: vol.1、第二巻、上、後編) ※誌名との部分重複OK<br>
+シリーズID<input type="text" name="series_id"><br>
+
+<br>
+
+形態
+<select name="form">
+ <option value="manga">漫画</option>
+ <option value="illust">イラスト</option>
+ <option value="novel">小説</option>
+ <option value="crit">評論</option>
+ <option value="multi">その他、複合</option>
+</select><br>
+
+言語
+<select name="lang">
+ <option value="jpn">日本語</option>
+ <option value="eng">英語</option>
+ <option value="chi_t">中国語（繁体字）</option>
+ <option value="multi">複合</option>
+</select><br>
+
+綴じ・方向
+<select name="side">
+ <option value="right">右綴じ</option>
+ <option value="left">左綴じ</option>
+ <option value="top">上綴じ</option>
+ <option value="multi">その他、複合</option>
+</select><br>
+
+成年向け
+<select name="adult">
+ <option value="no">いいえ</option>
+ <option value="yes">はい</option>
+</select><br>
+
+コピー本
+<select name="copibon">
+ <option value="noinfo">情報なし</option>
+ <option value="yes">はい</option>
+</select><br>
+
+総集編
+<select name="collection">
+ <option value="noinfo">情報なし</option>
+ <option value="yes">はい</option>
+</select><br>
+
+合同誌
+<select name="collabo">
+ <option value="noinfo">情報なし</option>
+ <option value="yes">はい</option>
+</select><br>
+
+<br>
+発行者情報<br>
+
+<div id="circle_list">
+<input type="text" name="circle1" size=40> <input type="text" name="author1" size=40> （サークル　／　著者）<br>
+<input type="text" name="circle2" size=40> <input type="text" name="author2" size=40><br>
+</div>
+
+<input type="button" value="+" onclick="add_circle();">
+<br>
+<br>
+
+ジャンル<br>
+
+<div id="original_list">
+<input type="text" name="original1" value="魔法少女まどか☆マギカ" size=50><br>
+<input type="text" name="original2" size=50><br>
+</div>
+<input type="button" value="+" onclick="add_original();">
+<br>
+サブジャンル<br>
+
+<div id="original_sub_list">
+<input type="text" name="original_sub1" size=50><br>
+<input type="text" name="original_sub2" size=50><br>
+</div>
+<input type="button" value="+" onclick="add_original_sub();">
+
+<br>
+<br>
+<button type="submit" name="cmd" value="confirm">登録</button>
+<br>
+
+---
+<br>
+<br>
+
+ゲスト<br>
+
+<div id="guest_list">
+<input type="text" name="guest_circle1" size=40> <input type="text" name="guest_author1" size=40> （サークル　／　著者）<br>
+<input type="text" name="guest_circle2" size=40> <input type="text" name="guest_author2" size=40><br>
+</div>
+<input type="button" value="+" onclick="add_guest();">
+<br>
+<br>
+
+タグ<br>
+
+<div id="tag_list">
+<input type="text" name="tag1" size=50><br>
+<input type="text" name="tag2" size=50><br>
+</div>
+<input type="button" value="+" onclick="add_tag();">
+<br>
+<br>
+
+参照: <br>
+
+<div id="ref_list">
+<input type="text" name="ref1_id"><br>
+</div>
+<input type="button" value="+" onclick="add_ref();">
+
+<br>
+
+</form>
+
+
+</body>
+</html>
